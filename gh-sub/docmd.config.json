@@ -1,0 +1,6 @@
+{
+  "title": "GH Pages Subpath Test",
+  "url": "https://mgks.github.io/gh-sub-parent",
+  "src": "./docs",
+  "out": "./site"
+}

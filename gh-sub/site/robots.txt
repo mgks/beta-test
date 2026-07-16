@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://alexhelms.github.io/my-project/sitemap.xml
