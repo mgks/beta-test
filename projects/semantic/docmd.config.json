@@ -1,0 +1,31 @@
+{
+  "title": "Summer + Semantic",
+  "engine": "js",
+  "layout": {
+    "spa": true,
+    "breadcrumbs": true,
+    "header": { "enabled": true },
+    "sidebar": { "collapsible": true },
+    "optionsMenu": {
+      "position": "header",
+      "components": { "search": true, "themeSwitch": true }
+    },
+    "footer": { "style": "minimal", "content": "docmd beta-test · Summer + Semantic", "branding": false }
+  },
+  "theme": {
+    "name": "default",
+    "appearance": "dark",
+    "codeHighlight": true,
+    "template": "summer"
+  },
+  "autoTitleFromH1": true,
+  "copyCode": true,
+  "pageNavigation": true,
+  "plugins": {
+    "seo": { "defaultDescription": "Semantic search project — validates auto-install of docmd-search, onnxruntime-node, and @huggingface/transformers on a fresh deploy." },
+    "search": {
+      "semantic": true,
+      "showConfidence": true
+    }
+  }
+}

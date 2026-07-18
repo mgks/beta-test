@@ -1,0 +1,38 @@
+{
+  "title": "i18n + Versioning",
+  "engine": "js",
+  "src": ".",
+  "i18n": {
+    "default": "en",
+    "locales": [
+      { "id": "en", "label": "English" },
+      { "id": "de", "label": "Deutsch" }
+    ]
+  },
+  "versions": {
+    "current": "v2",
+    "all": [
+      { "id": "v2", "dir": "v2", "label": "v2 (Current)" },
+      { "id": "v1", "dir": "v1", "label": "v1 (Legacy)" }
+    ]
+  },
+  "layout": {
+    "spa": true,
+    "breadcrumbs": true,
+    "header": { "enabled": true },
+    "sidebar": { "collapsible": true },
+    "optionsMenu": {
+      "position": "header",
+      "components": { "search": true, "themeSwitch": true }
+    },
+    "footer": { "style": "minimal", "content": "docmd beta-test · i18n + Versioning", "branding": false }
+  },
+  "theme": { "name": "default", "appearance": "auto", "codeHighlight": true },
+  "autoTitleFromH1": true,
+  "copyCode": true,
+  "pageNavigation": true,
+  "plugins": {
+    "seo": { "defaultDescription": "i18n + Versioning project — validates multi-locale routing and multi-version switcher on one documentation site." },
+    "search": { "semantic": false }
+  }
+}

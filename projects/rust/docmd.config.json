@@ -1,0 +1,23 @@
+{
+  "title": "Rust + Speed",
+  "engine": "rust",
+  "layout": {
+    "spa": true,
+    "breadcrumbs": true,
+    "header": { "enabled": true },
+    "sidebar": { "collapsible": true },
+    "optionsMenu": {
+      "position": "header",
+      "components": { "search": true, "themeSwitch": true }
+    },
+    "footer": { "style": "minimal", "content": "docmd beta-test · Rust + Speed", "branding": false }
+  },
+  "theme": { "name": "default", "appearance": "auto", "codeHighlight": true },
+  "autoTitleFromH1": true,
+  "copyCode": true,
+  "pageNavigation": true,
+  "plugins": {
+    "seo": { "defaultDescription": "Rust engine project — validates the native Rust parser binary on Linux CI." },
+    "search": { "semantic": false }
+  }
+}

@@ -65,24 +65,43 @@ jobs:
           node-version: "24"
           # No cache — package.json has no @docmd/* deps so cache is unhelpful here
 
-      # Install semantic search peer deps from npm (docmd-search, onnxruntime, transformers)
-      - name: Install npm dependencies
-        run: npm install --no-audit --no-fund
-
-      # Install all @docmd/* packages directly from the freshly packed tarballs.
-      # This overlays the real packages into node_modules without touching package.json.
-      - name: Install docmd packages from tarballs
+      # Add the locally built @docmd/* tarballs to package.json and install.
+      # This ensures npm registers them as dependencies and won't prune them
+      # when docmd auto-installs plugins or peer dependencies.
+      - name: Install dependencies (including local tarballs)
         run: |
           node -e "
-          const { execSync } = require('child_process');
           const fs = require('fs');
+          const { execSync } = require('child_process');
+          
+          const pkgJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          if (!pkgJson.dependencies) pkgJson.dependencies = {};
+          
           const tarDir = './_docmd-source/_playground/local-tars';
-          const tars = fs.readdirSync(tarDir)
-            .filter(f => f.endsWith('.tgz'))
-            .map(f => 'file:' + tarDir + '/' + f);
-          if (!tars.length) { console.error('No tarballs found in ' + tarDir); process.exit(1); }
-          console.log('Installing', tars.length, 'tarballs...');
-          execSync('npm install --no-save ' + tars.join(' '), { stdio: 'inherit' });
+          if (!fs.existsSync(tarDir)) {
+            console.error('Tarball directory not found: ' + tarDir);
+            process.exit(1);
+          }
+          
+          const files = fs.readdirSync(tarDir).filter(f => f.endsWith('.tgz'));
+          if (!files.length) {
+            console.error('No tarballs found in ' + tarDir);
+            process.exit(1);
+          }
+          
+          for (const file of files) {
+            const namePart = file.slice(0, -4);
+            if (namePart.startsWith('docmd-')) {
+              const shortName = namePart.slice('docmd-'.length);
+              const pkgName = '@docmd/' + shortName;
+              pkgJson.dependencies[pkgName] = 'file:' + tarDir + '/' + file;
+            }
+          }
+          
+          fs.writeFileSync('package.json', JSON.stringify(pkgJson, null, 2) + '\n');
+          console.log('Successfully injected tarball dependencies into package.json.');
+          
+          execSync('npm install --no-audit --no-fund', { stdio: 'inherit' });
           "
 
       # Cache semantic search embedding models (~270MB) to avoid re-downloading

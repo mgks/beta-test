@@ -4,3 +4,4 @@ package-lock.json
 _docmd-search/
 .docmd/
 .DS_Store
+local-tars/

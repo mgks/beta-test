@@ -8,11 +8,6 @@
     "dev": "docmd dev",
     "preview": "npx serve site"
   },
-  "dependencies": {
-    "@huggingface/transformers": "^4.2.0",
-    "docmd-search": "^0.1.1",
-    "onnxruntime-node": "^1.27.0"
-  },
   "allowScripts": {
     "@docmd/engine-rust": true,
     "@docmd/engine-rust-binaries": true,
