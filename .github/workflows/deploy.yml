@@ -21,88 +21,51 @@ jobs:
       - name: Checkout beta-test
         uses: actions/checkout@v4
 
-      # ── Build fresh tarballs from the docmd monorepo ─────────────────────
-      # This is the core of the beta-test pipeline: rather than publishing to
-      # npm and installing from there, we pack the monorepo at its current
-      # state (whatever is on main, pre-release) and install from those tars.
-      # This means a manual workflow_dispatch here = a full staging deploy of
-      # whatever docmd looks like right now, with zero extra steps needed.
-      - name: Checkout docmd monorepo
-        uses: actions/checkout@v4
-        with:
-          repository: docmd-io/docmd
-          ref: main
-          path: _docmd-source
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: latest
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24"
-          cache: "pnpm"
-          cache-dependency-path: _docmd-source/pnpm-lock.yaml
-
-      - name: Install monorepo dependencies
-        run: pnpm install --frozen-lockfile
-        working-directory: _docmd-source
-
-      - name: Build monorepo packages
-        run: pnpm -r run build
-        working-directory: _docmd-source
-
-      - name: Pack tarballs
-        run: node tools/sim.mjs --regen-tars --skip-monorepo-build
-        working-directory: _docmd-source
+      # # ── Build fresh tarballs from the docmd monorepo ─────────────────────
+      # # This is the core of the beta-test pipeline: rather than publishing to
+      # # npm and installing from there, we pack the monorepo at its current
+      # # state (whatever is on main, pre-release) and install from those tars.
+      # # This means a manual workflow_dispatch here = a full staging deploy of
+      # # whatever docmd looks like right now, with zero extra steps needed.
+      # - name: Checkout docmd monorepo
+      #   uses: actions/checkout@v4
+      #   with:
+      #     repository: docmd-io/docmd
+      #     ref: main
+      #     path: _docmd-source
+      # 
+      # - name: Setup pnpm
+      #   uses: pnpm/action-setup@v4
+      #   with:
+      #     version: latest
+      # 
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: "24"
+      #     cache: "pnpm"
+      #     cache-dependency-path: _docmd-source/pnpm-lock.yaml
+      # 
+      # - name: Install monorepo dependencies
+      #   run: pnpm install --frozen-lockfile
+      #   working-directory: _docmd-source
+      # 
+      # - name: Build monorepo packages
+      #   run: pnpm -r run build
+      #   working-directory: _docmd-source
+      # 
+      # - name: Pack tarballs
+      #   run: node tools/sim.mjs --regen-tars --skip-monorepo-build
+      #   working-directory: _docmd-source
 
       # ── Install & build the beta-test site ───────────────────────────────
       - name: Setup Node.js for site build
         uses: actions/setup-node@v4
         with:
           node-version: "24"
-          # No cache — package.json has no @docmd/* deps so cache is unhelpful here
 
-      # Add the locally built @docmd/* tarballs to package.json and install.
-      # This ensures npm registers them as dependencies and won't prune them
-      # when docmd auto-installs plugins or peer dependencies.
-      - name: Install dependencies (including local tarballs)
-        run: |
-          node -e "
-          const fs = require('fs');
-          const { execSync } = require('child_process');
-          
-          const pkgJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-          if (!pkgJson.dependencies) pkgJson.dependencies = {};
-          
-          const tarDir = './_docmd-source/_playground/local-tars';
-          if (!fs.existsSync(tarDir)) {
-            console.error('Tarball directory not found: ' + tarDir);
-            process.exit(1);
-          }
-          
-          const files = fs.readdirSync(tarDir).filter(f => f.endsWith('.tgz'));
-          if (!files.length) {
-            console.error('No tarballs found in ' + tarDir);
-            process.exit(1);
-          }
-          
-          for (const file of files) {
-            const namePart = file.slice(0, -4);
-            if (namePart.startsWith('docmd-')) {
-              const shortName = namePart.slice('docmd-'.length);
-              const pkgName = '@docmd/' + shortName;
-              pkgJson.dependencies[pkgName] = 'file:' + tarDir + '/' + file;
-            }
-          }
-          
-          fs.writeFileSync('package.json', JSON.stringify(pkgJson, null, 2) + '\n');
-          console.log('Successfully injected tarball dependencies into package.json.');
-          
-          execSync('npm install --no-audit --no-fund', { stdio: 'inherit' });
-          "
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
 
       # Cache semantic search embedding models (~270MB) to avoid re-downloading
       - name: Cache embedding models
