@@ -31,7 +31,6 @@
     "@docmd/plugin-seo": "file:./local-tars/docmd-plugin-seo.tgz",
     "@docmd/plugin-sitemap": "file:./local-tars/docmd-plugin-sitemap.tgz",
     "@docmd/plugin-threads": "file:./local-tars/docmd-plugin-threads.tgz",
-    "@docmd/template-summer": "file:./local-tars/docmd-template-summer.tgz",
     "@docmd/themes": "file:./local-tars/docmd-themes.tgz",
     "@docmd/tui": "file:./local-tars/docmd-tui.tgz",
     "@docmd/ui": "file:./local-tars/docmd-ui.tgz",
