@@ -3,7 +3,7 @@
   "out": "site",
   "plugins": {
     "ai": {
-      "assistant": true,
+      "assistant": false,
       "projectId": "docmd_aiv77jc8ms8qtpvd"
     }
   },
