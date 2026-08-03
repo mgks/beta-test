@@ -177,7 +177,7 @@ packages:
     engines: {node: '>=20.0.0'}
 
   '@docmd/plugin-ai@file:local-tars/docmd-plugin-ai.tgz':
-    resolution: {integrity: sha512-LfgOHwHvPaIpvjFPSI4+x3c/Dy/ewfqY+RHCzVoQham2aHJnxiR8Ou1BQdTYjQ/i29DaWOY0hZ5lW+mBNcES3g==, tarball: file:local-tars/docmd-plugin-ai.tgz}
+    resolution: {integrity: sha512-zDXm8vEKt2viXNd359vjyIo2tsYmxFkHMFZqoO5pb+Z4XeMOU4Z6RkR5wWUebAFt7yFoRH5wZ/6QV/bY46aA3w==, tarball: file:local-tars/docmd-plugin-ai.tgz}
     version: 0.9.0
     engines: {node: '>=20.0.0'}
 
@@ -741,8 +741,8 @@ packages:
   detect-node@2.1.0:
     resolution: {integrity: sha512-T0NIuQpnTvFDATNuHN5roPwSBG83rFsuO+MXXH9/3N1eFbn4wcPjttvjMLEPWJ0RGUYgQE7cGgS3tNxbqCGM7g==}
 
-  docmd-assistant@0.1.5:
-    resolution: {integrity: sha512-2sAxGqOAukahF1rgo0hgiB0MOcH1PoBb50qPHepmjSAgFoQr8tJgX5gKFXd5JdHzVLWcRcbG2YkADHZWV3KGJw==}
+  docmd-assistant@0.1.6:
+    resolution: {integrity: sha512-Y/+s1279g2KUTE9uXsErXCzl7pFarWDor7SJC3GBv+4B8QSMNWwyB+0RfhVfhpwUwD9vyNOGlKX52NvzzgIYTA==}
     engines: {node: '>=20.0.0'}
 
   docmd-search@0.1.3:
@@ -1095,7 +1095,7 @@ snapshots:
 
   '@docmd/plugin-ai@file:local-tars/docmd-plugin-ai.tgz':
     dependencies:
-      docmd-assistant: 0.1.5
+      docmd-assistant: 0.1.6
 
   '@docmd/plugin-analytics@file:local-tars/docmd-plugin-analytics.tgz(@docmd/api@file:local-tars/docmd-api.tgz)':
     dependencies:
@@ -1487,7 +1487,7 @@ snapshots:
 
   detect-node@2.1.0: {}
 
-  docmd-assistant@0.1.5:
+  docmd-assistant@0.1.6:
     dependencies:
       aiplug: 0.1.2
 
