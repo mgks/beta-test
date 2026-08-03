@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout beta-test
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       # # ── Build fresh tarballs from the docmd monorepo ─────────────────────
       # # This is the core of the beta-test pipeline: rather than publishing to
@@ -28,19 +28,19 @@ jobs:
       # # This means a manual workflow_dispatch here = a full staging deploy of
       # # whatever docmd looks like right now, with zero extra steps needed.
       # - name: Checkout docmd monorepo
-      #   uses: actions/checkout@v4
+      #   uses: actions/checkout@v7
       #   with:
       #     repository: docmd-io/docmd
       #     ref: main
       #     path: _docmd-source
       # 
       # - name: Setup pnpm
-      #   uses: pnpm/action-setup@v4
+      #   uses: pnpm/action-setup@v5
       #   with:
       #     version: latest
       # 
       # - name: Setup Node.js
-      #   uses: actions/setup-node@v4
+      #   uses: actions/setup-node@v7
       #   with:
       #     node-version: "24"
       #     cache: "pnpm"
@@ -60,7 +60,7 @@ jobs:
 
       # ── Install & build the beta-test site ───────────────────────────────
       - name: Setup Node.js for site build
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: "24"
 
@@ -69,7 +69,7 @@ jobs:
 
       # Cache semantic search embedding models (~270MB) to avoid re-downloading
       - name: Cache embedding models
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/docmd-search/models
           key: docmd-search-models-${{ runner.os }}-${{ hashFiles('docmd.config.json') }}
@@ -82,7 +82,7 @@ jobs:
           NODE_OPTIONS: "--max-old-space-size=4096"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./site
           include-hidden-files: true
@@ -96,4 +96,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
