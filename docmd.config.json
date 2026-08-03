@@ -1,6 +1,12 @@
 {
   "url": "https://mgks.github.io/beta-test",
   "out": "site",
+  "plugins": {
+    "ai": {
+      "assistant": true,
+      "projectId": "docmd_aiv77jc8ms8qtpvd"
+    }
+  },
   "workspace": {
     "switcher": {
       "enabled": true,
