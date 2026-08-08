@@ -1,19 +1,26 @@
-# Mermaid Diagrams
+# Mermaid Diagrams Test Suite
 
-This page tests the rendering of Mermaid flowcharts and sequence diagrams.
+This page tests both the standard GFM code block fallback and the modern `::: mermaid` container UI shell in `docmd` v0.9.1.
 
-## Flowchart
+---
 
-```mermaid
+## 1. Modern `::: mermaid` Container UI Shell
+
+This diagram uses the `::: mermaid` container with explicit attributes: `title`, `icon`, `align:center`, `zoom:true`, `theme:forest`, and trailing `# comments`.
+
+::: mermaid title:"Architecture Overview" icon:layers align:center zoom:true theme:forest # Container header comment
 graph TD
-    A[Start] --> B{Is docmd installed?}
-    B -- Yes --> C[Run docmd build]
-    B -- No --> D[Run npm i -D @docmd/core]
-    D --> C
-    C --> E[Site generated!]
-```
+    Client[Web Client] --> API[docmd API]
+    API --> Parser[docmd Parser]
+    API --> Engine[docmd Engine]
+    Parser --> SVG[Rendered SVG Diagram]
+::: /mermaid # Container closing comment
 
-## Sequence Diagram
+---
+
+## 2. Standard GFM Code Block Fallback
+
+Standard ` ```mermaid ` code blocks inherit global default options from `docmd.config.json`.
 
 ```mermaid
 sequenceDiagram
