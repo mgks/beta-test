@@ -8,11 +8,18 @@ noStyle: true
 Below is an HTML block containing blank lines between tags in a `noStyle` page:
 
 <div>
+
+      <div>
+      <b>hello</b>
+                </div>
+
   <h2>Section Title</h2>
 
-  <p>First paragraph inside HTML block.</p>
+     <p>First paragraph inside HTML block.</p>
 
-  <p>Second paragraph following a blank line inside the HTML block.</p>
+
+   <p>Second paragraph following a blank line inside the HTML block.</p>
+
 </div>
 
 <p>Following paragraph after the HTML block.</p>
