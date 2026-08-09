@@ -50,14 +50,14 @@ Edit `docmd.config.json` to customise themes and plugins.
 ## 4. Self-Closing Containers & Redundant Close Handling
 
 ### Standalone Buttons, Tags & Embeds
-::: button "GitHub Repository (External)" url:"https://github.com/docmd-io/docmd" icon:github
+::: button "GitHub Repository (External)" url:"external:https://github.com/docmd-io/docmd" icon:github
 ::: tag "v0.9.1" style:success icon:check
 ::: embed url:"https://github.com/docmd-io/docmd"
 
 ### Redundant Closing Tags on Self-Closing Containers
 Self-closing containers do not require closing tags, but if a user writes `::: /button` or `::: /tag` or `::::/tag`, the normaliser strips them without error or visual leakage:
 
-::: button "External Link Button with Redundant Close" url:"https://docmd.io" icon:external-link # Comment
+::: button "External Link Button with Redundant Close" url:"external:https://docmd.io" icon:external-link # Comment
 ::: /button # Redundant close tag should be stripped gracefully
 
 ::: tag "Tag with Redundant Close" style:warning icon:alert-triangle
@@ -66,14 +66,14 @@ Self-closing containers do not require closing tags, but if a user writes `::: /
 ### Inline Tags & Buttons in Middle of Text
 Tags and buttons can be embedded directly within inline text paragraphs, with optional explicit closing tags (`::: /tag` or `::: /button`):
 
-This release includes the new ::: tag "v0.9.1" style:success icon:check ::: /tag feature and the ::: button "Star on GitHub" url:"https://github.com/docmd-io/docmd" icon:star ::: /button action seamlessly in the middle of a sentence!
+This release includes the new ::: tag "v0.9.1" style:success icon:check ::: /tag feature and the ::: button "Star on GitHub" url:"external:https://github.com/docmd-io/docmd" icon:star ::: /button action seamlessly in the middle of a sentence!
 
 ## 5. Tooltip Container (`::: tip`)
 
 ### Inline Hover Tooltip
 Hover popovers can be embedded inline using `::: tip`:
 
-Docmd uses a ::: tip "No complex build pipeline required" term:"Zero-Config" ::: /tip architecture and integrates with ::: tip "Docmd Engine on GitHub" url:"https://github.com/docmd-io/docmd" ::: /tip for open source docs.
+Docmd uses a ::: tip "No complex build pipeline required" term:"Zero-Config" ::: /tip architecture and integrates with ::: tip "Docmd Engine on GitHub" url:"external:https://github.com/docmd-io/docmd" ::: /tip for open source docs.
 
 ### Block Tooltip
 ::: tip "Interactive Diagram Shell"
