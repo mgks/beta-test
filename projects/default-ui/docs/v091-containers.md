@@ -52,7 +52,7 @@ Edit `docmd.config.json` to customise themes and plugins.
 ### Standalone Buttons, Tags & Embeds
 ::: button "GitHub Repository (External)" url:"external:https://github.com/docmd-io/docmd" icon:github
 ::: tag "v0.9.1" style:success icon:check
-::: tag "Docmd Core (External Link Tag)" url:"external:https://github.com/docmd-io/docmd" style:primary icon:external-link
+::: tag "Docmd Core (Internal Link Tag)" url:"https://github.com/docmd-io/docmd" style:primary icon:external-link
 ::: embed url:"https://github.com/docmd-io/docmd"
 
 ### Redundant Closing Tags on Self-Closing Containers
