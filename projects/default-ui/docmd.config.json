@@ -13,7 +13,8 @@
         { "text": "Home", "url": "/" },
         { "text": "Mermaid", "url": "/mermaid/" },
         { "text": "Math", "url": "/math/" },
-        { "text": "Containers", "url": "/containers/" }
+        { "text": "Containers", "url": "/containers/" },
+        { "text": "v0.9.1 Test", "url": "/v091-containers/" }
       ]
     },
     "optionsMenu": {
@@ -29,6 +30,7 @@
   "navigation": [
     { "title": "Home", "path": "/" },
     { "title": "Containers", "path": "/containers/" },
+    { "title": "v0.9.1 Containers Test", "path": "/v091-containers/" },
     {
       "title": "Nested Category",
       "children": [

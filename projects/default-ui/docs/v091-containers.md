@@ -49,30 +49,31 @@ Edit `docmd.config.json` to customise themes and plugins.
 
 ## 4. Self-Closing Containers & Redundant Close Handling
 
-::: button "Standard Button" url:"https://docmd.io" icon:external-link
-::: tag "v0.9.1" style:success
-::: embed url:"https://docmd.io"
+### Standalone Buttons, Tags & Embeds
+::: button "GitHub Repository (External)" url:"https://github.com/docmd-io/docmd" icon:github
+::: tag "v0.9.1" style:success icon:check
+::: embed url:"https://github.com/docmd-io/docmd"
 
 ### Redundant Closing Tags on Self-Closing Containers
-Self-closing containers do not require closing tags, but if a user writes `::: /button` or `::: /tag`, the normaliser strips them without error or visual leakage:
+Self-closing containers do not require closing tags, but if a user writes `::: /button` or `::: /tag` or `::::/tag`, the normaliser strips them without error or visual leakage:
 
-::: button "Button with Redundant Close" url:"https://docmd.io" icon:link # Comment
+::: button "External Link Button with Redundant Close" url:"https://docmd.io" icon:external-link # Comment
 ::: /button # Redundant close tag should be stripped gracefully
 
-::: tag "Tag with Redundant Close" style:warning
-::: /tag
+::: tag "Tag with Redundant Close" style:warning icon:alert-triangle
+::::/tag
 
 ### Inline Tags & Buttons in Middle of Text
 Tags and buttons can be embedded directly within inline text paragraphs, with optional explicit closing tags (`::: /tag` or `::: /button`):
 
-This release includes the new ::: tag "v0.9.1" color:#10b981 icon:check ::: /tag feature and the ::: button "Get Docmd" url:"https://docmd.io" icon:download ::: /button action seamlessly in the middle of a sentence!
+This release includes the new ::: tag "v0.9.1" style:success icon:check ::: /tag feature and the ::: button "Star on GitHub" url:"https://github.com/docmd-io/docmd" icon:star ::: /button action seamlessly in the middle of a sentence!
 
 ## 5. Tooltip Container (`::: tip`)
 
 ### Inline Hover Tooltip
 Hover popovers can be embedded inline using `::: tip`:
 
-Docmd uses a ::: tip "No complex build pipeline required" term:"Zero-Config" ::: /tip architecture.
+Docmd uses a ::: tip "No complex build pipeline required" term:"Zero-Config" ::: /tip architecture and integrates with ::: tip "Docmd Engine on GitHub" url:"https://github.com/docmd-io/docmd" ::: /tip for open source docs.
 
 ### Block Tooltip
 ::: tip "Interactive Diagram Shell"
@@ -88,15 +89,14 @@ An orphan closing tag (`::: /card` or stray `:::`) with no matching open tag is 
 ::: /random # Unknown orphan close tag — stripped
 
 ### Unclosed Container Auto-Closing
-A container opened without an explicit close is automatically closed before the next section or EOF:
+A container opened without an explicit close is automatically closed before the next section heading or EOF:
 
 ::: callout info "Auto-Closed Callout"
-This callout was opened with `::: callout info` but never explicitly closed. The container normaliser auto-closes it cleanly!
+This callout was opened with `::: callout info` but never explicitly closed. The container normaliser auto-closes it cleanly before Section 7!
 
+This is content inside the unclosed callout.
 
-This is another content
-
-## 6. Deep Nesting Test
+## 7. Deep Nesting Test
 
 ::: callout info "Outer Container with Nesting"
 This is the outer container.
@@ -106,12 +106,12 @@ This is the first nested card.
 
 ::: callout warning "Double-Nested Alert"
 This is a double-nested alert inside a card inside a callout.
-:::/callout
+::: /callout
 
 ::: /card
 
 ::: card # Nested card 2
 This is the second nested card.
-:::/card
+::: /card
 
-:::/callout
+::: /callout
