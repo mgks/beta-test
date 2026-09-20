@@ -6,5 +6,5 @@ This project validates multilingual localization routing and search functionalit
 
 Welcome to the English documentation.
 
-- [Switch to German](../de/)
+- [Switch to German](de/)
 - [Page 1](page1/)

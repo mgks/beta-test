@@ -35,7 +35,11 @@
     "@docmd/themes": "file:./local-tars/docmd-themes.tgz",
     "@docmd/tui": "file:./local-tars/docmd-tui.tgz",
     "@docmd/ui": "file:./local-tars/docmd-ui.tgz",
-    "@docmd/utils": "file:./local-tars/docmd-utils.tgz"
+    "@docmd/utils": "file:./local-tars/docmd-utils.tgz",
+    "@huggingface/transformers": "^4.2.0",
+    "docmd-search": "^0.1.5",
+    "onnxruntime-node": "^1.29.0",
+    "sharp": "^0.35.4"
   },
   "allowScripts": {
     "@docmd/engine-rust": true,

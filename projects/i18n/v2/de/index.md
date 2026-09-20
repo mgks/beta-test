@@ -6,5 +6,5 @@ Dieses Projekt validiert die mehrsprachige Lokalisierungs-Routing- und Suchfunkt
 
 Willkommen bei der deutschen Dokumentation.
 
-- [Zurück zu Englisch](../en/)
+- [Zurück zu Englisch](../)
 - [Seite 1](page1/)
