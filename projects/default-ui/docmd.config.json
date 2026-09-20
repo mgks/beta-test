@@ -4,43 +4,110 @@
   "layout": {
     "spa": true,
     "breadcrumbs": true,
-    "header": { "enabled": true },
-    "sidebar": { "collapsible": true, "defaultCollapsed": false },
+    "header": {
+      "enabled": true
+    },
+    "sidebar": {
+      "collapsible": true,
+      "defaultCollapsed": false
+    },
     "menubar": {
       "enabled": true,
       "position": "top",
       "left": [
-        { "text": "Home", "url": "/" },
-        { "text": "Mermaid", "url": "/mermaid/" },
-        { "text": "Math", "url": "/math/" },
-        { "text": "Containers", "url": "/containers/" },
-        { "text": "v0.9.1 Test", "url": "/v091-containers/" }
+        {
+          "text": "Home",
+          "url": "/"
+        },
+        {
+          "text": "Mermaid",
+          "url": "/mermaid/"
+        },
+        {
+          "text": "Math",
+          "url": "/math/"
+        },
+        {
+          "text": "Containers",
+          "url": "/containers/"
+        },
+        {
+          "text": "v0.9.1 Test",
+          "url": "/v091-containers/"
+        }
       ]
     },
     "optionsMenu": {
       "position": "header",
-      "components": { "search": true, "themeSwitch": true }
+      "components": {
+        "search": true,
+        "themeSwitch": true
+      }
     },
-    "footer": { "style": "complete", "content": "docmd beta-test · Default UI + Showcase", "branding": true }
+    "footer": {
+      "style": "complete",
+      "content": "docmd beta-test · Default UI + Showcase",
+      "branding": true
+    },
+    "banner": {
+      "position": "top",
+      "content": "**Welcome to docmd 0.9.6 staging test** — Testing all new release features.",
+      "dismissible": true,
+      "link": {
+        "text": "Release Info",
+        "url": "https://github.com/docmd-io/docmd",
+        "external": true
+      }
+    }
   },
-  "theme": { "name": "default", "appearance": "auto", "codeHighlight": true },
+  "theme": {
+    "name": "default",
+    "appearance": "auto",
+    "codeHighlight": true
+  },
   "autoTitleFromH1": true,
   "copyCode": true,
   "pageNavigation": true,
   "navigation": [
-    { "title": "Home", "path": "/" },
-    { "title": "Containers", "path": "/containers/" },
-    { "title": "v0.9.1 Containers Test", "path": "/v091-containers/" },
+    {
+      "title": "Home",
+      "path": "/"
+    },
+    {
+      "title": "Containers",
+      "path": "/containers/"
+    },
+    {
+      "title": "v0.9.1 Containers Test",
+      "path": "/v091-containers/"
+    },
+    {
+      "title": "GitHub Repo",
+      "path": "https://github.com/docmd-io/docmd",
+      "external": true
+    },
     {
       "title": "Nested Category",
       "children": [
-        { "title": "Math Rendering", "path": "/math/" },
-        { "title": "Mermaid Diagrams", "path": "/mermaid/" },
+        {
+          "title": "Math Rendering",
+          "path": "/math/"
+        },
+        {
+          "title": "Mermaid Diagrams",
+          "path": "/mermaid/"
+        },
         {
           "title": "Subnested Category",
           "children": [
-            { "title": "Nested Page A", "path": "/nested/page-a/" },
-            { "title": "Nested Page B", "path": "/nested/subnested/page-b/" }
+            {
+              "title": "Nested Page A",
+              "path": "/nested/page-a/"
+            },
+            {
+              "title": "Nested Page B",
+              "path": "/nested/subnested/page-b/"
+            }
           ]
         }
       ]
@@ -49,6 +116,10 @@
   "plugins": {
     "math": true,
     "mermaid": true,
-    "seo": { "defaultDescription": "Default UI + Showcase — testing every UI component, callout block, and plugin rendering." }
+    "okf": true,
+    "threads": true,
+    "seo": {
+      "defaultDescription": "Default UI + Showcase — testing every UI component, callout block, and plugin rendering."
+    }
   }
 }

@@ -10,7 +10,29 @@
       "position": "header",
       "components": { "search": true, "themeSwitch": true }
     },
-    "footer": { "style": "minimal", "content": "docmd beta-test · Summer + Semantic", "branding": false }
+    "footer": { "style": "minimal", "content": "docmd beta-test · Summer + Semantic", "branding": false },
+    "banners": [
+      {
+        "position": "top",
+        "content": "**Summer Template + Semantic Search 0.9.6**",
+        "dismissible": true,
+        "link": {
+          "text": "View Release",
+          "url": "https://github.com/docmd-io/docmd",
+          "external": true
+        }
+      },
+      {
+        "position": "sidebar-bottom",
+        "content": "Staging build running on GitHub Pages with fresh 0.9.6 tarballs.",
+        "dismissible": true,
+        "link": {
+          "text": "Changelog",
+          "url": "https://github.com/docmd-io/docmd/releases",
+          "external": true
+        }
+      }
+    ]
   },
   "theme": {
     "name": "default",
@@ -24,6 +46,7 @@
   "navigation": [
     { "title": "Semantic Home", "path": "/" },
     { "title": "Configuration", "path": "/configuration/" },
+    { "title": "External Docs", "path": "https://docs.docmd.io", "external": true },
     {
       "title": "Semantic Nested",
       "children": [
@@ -40,6 +63,7 @@
     }
   ],
   "plugins": {
+    "okf": true,
     "seo": { "defaultDescription": "Semantic search project — validates auto-install of docmd-search, onnxruntime-node, and @huggingface/transformers on a fresh deploy." },
     "search": {
       "semantic": true,
