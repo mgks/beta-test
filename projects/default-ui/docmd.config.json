@@ -34,6 +34,10 @@
         {
           "text": "v0.9.1 Test",
           "url": "/v091-containers/"
+        },
+        {
+          "text": "MD Options",
+          "url": "/markdown-options/"
         }
       ]
     },
@@ -64,6 +68,10 @@
     "name": "default",
     "appearance": "auto",
     "codeHighlight": true
+  },
+  "markdown": {
+    "linkify": true,
+    "typographer": true
   },
   "autoTitleFromH1": true,
   "copyCode": true,
@@ -111,6 +119,10 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Markdown Options (#241 #242)",
+      "path": "/markdown-options/"
     }
   ],
   "plugins": {
