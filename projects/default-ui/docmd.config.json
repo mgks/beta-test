@@ -55,7 +55,7 @@
     },
     "banner": {
       "position": "top",
-      "content": "**Welcome to docmd 0.9.6 staging test** — Testing all new release features.",
+      "content": "**Welcome to docmd 0.9.7 staging test** — Testing all new release features.",
       "dismissible": true,
       "link": {
         "text": "Release Info",

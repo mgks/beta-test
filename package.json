@@ -15,6 +15,8 @@
     "@docmd/engine-js": "file:./local-tars/docmd-engine-js.tgz",
     "@docmd/engine-rust": "file:./local-tars/docmd-engine-rust.tgz",
     "@docmd/engine-rust-binaries": "file:./local-tars/docmd-engine-rust-binaries.tgz",
+    "@docmd/engine-python": "file:./local-tars/docmd-engine-python.tgz",
+    "@docmd/template-summer": "file:./local-tars/docmd-template-summer.tgz",
     "@docmd/live": "file:./local-tars/docmd-live.tgz",
     "@docmd/parser": "file:./local-tars/docmd-parser.tgz",
     "@docmd/plugin-ai": "file:./local-tars/docmd-plugin-ai.tgz",
