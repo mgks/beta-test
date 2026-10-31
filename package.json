@@ -27,6 +27,7 @@
     "@docmd/plugin-mermaid": "file:./local-tars/docmd-plugin-mermaid.tgz",
     "@docmd/plugin-okf": "file:./local-tars/docmd-plugin-okf.tgz",
     "@docmd/plugin-openapi": "file:./local-tars/docmd-plugin-openapi.tgz",
+    "@docmd/plugin-playground": "file:./local-tars/docmd-plugin-playground.tgz",
     "@docmd/plugin-pwa": "file:./local-tars/docmd-plugin-pwa.tgz",
     "@docmd/plugin-search": "file:./local-tars/docmd-plugin-search.tgz",
     "@docmd/plugin-seo": "file:./local-tars/docmd-plugin-seo.tgz",

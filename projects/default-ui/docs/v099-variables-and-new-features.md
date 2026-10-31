@@ -127,3 +127,48 @@ Pages, layouts, and search indexes are built in parallel.
 Client runtime seamlessly synchronises interactive elements.
 :::
 ::: /steps
+
+## 6. Interactive Playground Verification
+
+Test the newly integrated `@docmd/plugin-playground` core plugin with runnable JavaScript, live HTML components, and active repository file linking:
+
+### A. JavaScript Variable Explorer (Fenced Syntax)
+
+Execute JavaScript in real time with captured console logs and expression evaluation:
+
+```js playground title="Variable Explorer & Runtime SDK" icon:code live
+const version = window.docmd?.var?.get("docmd.version") || "0.9.9";
+const year = window.docmd?.var?.get("docmd.buildYear") || new Date().getFullYear();
+
+console.log("Compiler Release:", version);
+console.log("Current Build Year:", year);
+
+// Mutate client variable and verify DOM reactivity
+if (window.docmd?.var) {
+  window.docmd.var.set("user.plan", "Enterprise Edition");
+  console.info("Dynamically set user.plan to:", window.docmd.var.get("user.plan"));
+}
+
+return `System Status: Online (v${version})`;
+```
+
+### B. Live HTML & CSS Component Sandbox
+
+Edit the HTML/CSS markup below and switch to the **Preview** tab to see real-time UI rendering:
+
+```html playground title="Live Interactive UI Component" icon:layout live
+<div style="padding: 16px; border-radius: 12px; background: linear-gradient(135deg, #4f46e5, #06b6d4); color: white; font-family: sans-serif; box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);">
+  <h3 style="margin: 0 0 8px 0; font-size: 16px;">Playground Component Preview</h3>
+  <p style="margin: 0 0 12px 0; font-size: 13px; opacity: 0.9;">Edit this markup and click Run or press Cmd+Enter.</p>
+  <button style="padding: 8px 16px; background: white; color: #4f46e5; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: transform 0.15s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" onclick="alert('Hello from Playground live component!')">
+    Click Me
+  </button>
+</div>
+```
+
+### C. Active Script Embedding (Self-Closing Container)
+
+Linked directly to `docs/snippets/demo.js` via the self-closing container syntax:
+
+::: playground src="./snippets/demo.js" title:"Active Codebase Script" icon:cpu live /:::
+
