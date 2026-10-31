@@ -130,7 +130,7 @@ Client runtime seamlessly synchronises interactive elements.
 
 ## 6. Interactive Playground Verification
 
-Test the newly integrated `@docmd/plugin-playground` core plugin with runnable JavaScript, live HTML components, and active repository file linking:
+Test the newly integrated `@docmd/plugin-playground` plugin with runnable JavaScript, live HTML components, tabbed "Live" vs "Code" toggles, and active script sourcing:
 
 ### A. JavaScript Variable Explorer (Fenced Syntax)
 
@@ -166,9 +166,73 @@ Edit the HTML/CSS markup below and switch to the **Preview** tab to see real-tim
 </div>
 ```
 
-### C. Active Script Embedding (Self-Closing Container)
+### C. Container with "Live" and "Code" Tab Switching
 
-Linked directly to `docs/snippets/demo.js` via the self-closing container syntax:
+When `tabs` is enabled in the container configuration, users can toggle between the rendered component output and the underlying source code:
 
-::: playground src="./snippets/demo.js" title:"Active Codebase Script" icon:cpu live /:::
+::: playground tabs title="Tabbed Component (Live & Code Switcher)" icon:layout live
+```html
+<div style="padding: 20px; border-radius: 10px; background: #0f172a; color: #38bdf8; font-family: system-ui, sans-serif; border: 1px solid #1e293b;">
+  <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+    <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#10b981;"></span>
+    <strong style="color:#f8fafc; font-size:14px;">Tabbed Preview Mode Active</strong>
+  </div>
+  <p style="margin:0 0 12px 0; font-size:13px; color:#94a3b8; line-height:1.5;">
+    Switch between the <strong>Live</strong> rendering and <strong>Code</strong> view using the tabs in the top-right toolbar.
+  </p>
+  <button style="padding:6px 14px; background:#0284c7; color:#fff; border:none; border-radius:6px; font-size:12px; font-weight:600; cursor:pointer;" onclick="console.log('Action triggered from tabbed component preview!')">
+    Trigger Console Log
+  </button>
+</div>
+```
+:::
+
+### D. Tabbed Container Starting on Code View
+
+Use `tabs:code` or `tabs view="code"` to present the code by default whilst still offering an instant "Live" tab switcher:
+
+::: playground tabs:code title="Tabbed Container (Code First)" icon:code live
+```js
+// Compute factorial recursively
+function factorial(n) {
+  if (n <= 1) return 1;
+  return n * factorial(n - 1);
+}
+
+const num = 6;
+const result = factorial(num);
+console.log(`Factorial of ${num} is:`, result);
+return result;
+```
+:::
+
+### E. Active Script Sourcing (Self-Closing Container)
+
+Linked directly to `./snippets/demo.js` via the self-closing container syntax. Any updates in the repository file automatically reflect in documentation:
+
+::: playground src="./snippets/demo.js" title="Active Codebase Script" icon:cpu live /:::
+
+### F. Active Script Sourcing with Tab Switching
+
+Sourced scripts can also combine with `tabs` to allow toggling between the live script evaluation and the source code:
+
+::: playground src="./snippets/demo.js" tabs title="Sourced Metric Analysis with Tabs" icon:bar-chart-2 live :::
+:::
+
+### G. Missing Script Graceful Warning Notice
+
+If an author specifies a source script that does not exist or has been relocated, docmd displays a graceful warning banner and prints clean fallback code in the editor without failing the build:
+
+::: playground src="./snippets/missing-script.js" title="Missing Script Graceful Warning" icon:alert-triangle /:::
+
+### H. Runtime & Syntax Error Handling
+
+If user code contains a syntax error or throws an unhandled runtime exception during evaluation, the playground displays an execution warning alert inside the console:
+
+```js playground title="Execution Error Handling" icon:shield-alert
+// Intentional error demonstration: accessing undefined reference
+console.log("Beginning execution...");
+const nonExistentObject = undefined;
+nonExistentObject.invokeMissingMethod();
+```
 
