@@ -40,6 +40,10 @@
           "url": "/v098-whats-new/"
         },
         {
+          "text": "v0.9.9 Test",
+          "url": "/v099-variables-and-new-features/"
+        },
+        {
           "text": "MD Options",
           "url": "/markdown-options/"
         }
@@ -59,7 +63,7 @@
     },
     "banner": {
       "position": "top",
-      "content": "**Welcome to docmd 0.9.8 staging** — Testing new release features including LLMs prompt support & Turkish i18n.",
+      "content": "**Welcome to docmd v{{ docmd.version }} staging** — Testing Variables & Personalisation Engine, Versioned Search, and Template Resolvers.",
       "dismissible": true,
       "link": {
         "text": "Release Info",
@@ -67,6 +71,13 @@
         "external": true
       }
     }
+  },
+  "variables": {
+    "stagingEnv": "production-beta",
+    "dynamic": [
+      "user.name",
+      "user.apiKey"
+    ]
   },
   "theme": {
     "name": "default",
@@ -127,6 +138,10 @@
     {
       "title": "v0.9.8 What's New",
       "path": "/v098-whats-new/"
+    },
+    {
+      "title": "v0.9.9 Variables & Features",
+      "path": "/v099-variables-and-new-features/"
     },
     {
       "title": "Markdown Options",
