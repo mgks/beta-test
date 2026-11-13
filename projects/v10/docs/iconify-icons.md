@@ -43,9 +43,9 @@ Full support for Markdown, MDX, and OpenAPI schemas.
 
 ### 3. Inline Icons
 
-- Terminal icon: ::: button icon="iconify:carbon:terminal" text="Terminal" url="#" /:::
-- GitHub icon: ::: button icon="iconify:mdi:github" text="GitHub" url="https://github.com/docmd-io/docmd" /:::
-- Sparkles icon: ::: button icon="iconify:lucide:sparkles" text="New in 0.10.0" url="#" /:::
+- Terminal icon: ::: button icon="iconify:carbon:terminal" text="Terminal" url="#" :::
+- GitHub icon: ::: button icon="iconify:mdi:github" text="GitHub" url="https://github.com/docmd-io/docmd" :::
+- Sparkles icon: ::: button icon="iconify:lucide:sparkles" text="New in 0.10.0" url="#" :::
 
 ## Configuration
 
