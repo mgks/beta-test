@@ -30,7 +30,7 @@ Run `docmd doctor` before deploying to staging or production to catch misconfigu
 ## Usage & Output Modes
 
 ::: tabs
-=== Human Terminal Output
+::: tab "Human Terminal Output"
 ```bash
 npx docmd doctor
 ```
@@ -53,8 +53,9 @@ npx docmd doctor
 
 Diagnostic summary: 0 errors, 0 warnings.
 ```
+::: /tab
 
-=== Machine-Readable JSON
+::: tab "Machine-Readable JSON"
 ```bash
 npx docmd doctor --json
 ```
@@ -74,4 +75,5 @@ npx docmd doctor --json
   }
 }
 ```
-:::
+::: /tab
+::: /tabs

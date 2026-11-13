@@ -43,7 +43,7 @@ Configure production server defaults inside `docmd.config.json`:
 ## Running the Server
 
 ::: tabs
-=== CLI Command
+::: tab "CLI Command"
 ```bash
 # Start production server on default port 3000
 npx docmd serve
@@ -51,8 +51,9 @@ npx docmd serve
 # Bind to custom interface without opening a browser
 npx docmd serve --host 127.0.0.1 --port 8080 --no-open
 ```
+::: /tab
 
-=== Docker Deployment
+::: tab "Docker Deployment"
 ```dockerfile
 FROM node:24-alpine
 WORKDIR /docs
@@ -61,7 +62,8 @@ RUN npm install -g @docmd/core
 EXPOSE 3000
 CMD ["docmd", "serve", "--host", "0.0.0.0", "--port", "3000", "--no-open"]
 ```
-:::
+::: /tab
+::: /tabs
 
 ## Health Check Verification
 
