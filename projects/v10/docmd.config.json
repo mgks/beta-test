@@ -1,0 +1,125 @@
+{
+  "title": "docmd v0.10.0 Beta Test Suite",
+  "url": "https://mgks.github.io/beta-test",
+  "engine": "js",
+  "layout": {
+    "spa": true,
+    "breadcrumbs": true,
+    "header": {
+      "enabled": true
+    },
+    "sidebar": {
+      "collapsible": true,
+      "defaultCollapsed": false
+    },
+    "menubar": {
+      "enabled": true,
+      "position": "top",
+      "left": [
+        { "text": "Overview", "url": "/" },
+        { "text": "Production Server", "url": "/production-server/" },
+        { "text": "Static Assets", "url": "/static-assets/" },
+        { "text": "MDX Components", "url": "/mdx-components/" },
+        { "text": "Iconify Icons", "url": "/iconify-icons/" },
+        { "text": "Variables & Runtime", "url": "/variables-runtime/" },
+        { "text": "Playground", "url": "/playground-runner/" },
+        { "text": "Doctor", "url": "/doctor-diagnostics/" }
+      ]
+    },
+    "optionsMenu": {
+      "position": "header",
+      "components": {
+        "search": true,
+        "themeSwitch": true
+      }
+    },
+    "banner": {
+      "position": "top",
+      "content": "**docmd v{{ docmd.version }} Staging** — Testing Production Server, Static Assets, MDX, Iconify & Diagnostics.",
+      "dismissible": true,
+      "link": {
+        "text": "GitHub Release",
+        "url": "https://github.com/docmd-io/docmd",
+        "external": true
+      }
+    },
+    "footer": {
+      "style": "complete",
+      "content": "© {{ docmd.buildYear }} docmd.io · Pre-release Staging for v{{ docmd.version }}",
+      "branding": true
+    }
+  },
+  "static": ["public"],
+  "serve": {
+    "port": 3000,
+    "host": "127.0.0.1",
+    "compress": true,
+    "securityHeaders": true,
+    "healthCheck": true
+  },
+  "plugins": {
+    "mdx": true,
+    "iconify": true,
+    "playground": true,
+    "seo": true,
+    "sitemap": true,
+    "search": true,
+    "mermaid": true,
+    "math": true
+  },
+  "variables": {
+    "featureRelease": "0.10.0",
+    "testEnvironment": "beta-test",
+    "dynamic": [
+      "user.name",
+      "user.role",
+      "user.apiKey"
+    ]
+  },
+  "theme": {
+    "name": "default",
+    "appearance": "auto",
+    "codeHighlight": true
+  },
+  "markdown": {
+    "linkify": true,
+    "typographer": true
+  },
+  "autoTitleFromH1": true,
+  "copyCode": true,
+  "pageNavigation": true,
+  "navigation": [
+    {
+      "title": "Overview",
+      "path": "/"
+    },
+    {
+      "title": "Production Server (docmd serve)",
+      "path": "/production-server"
+    },
+    {
+      "title": "Static Root Assets Pipeline",
+      "path": "/static-assets"
+    },
+    {
+      "title": "MDX Component Rendering",
+      "path": "/mdx-components"
+    },
+    {
+      "title": "Iconify Dynamic Icons",
+      "path": "/iconify-icons"
+    },
+    {
+      "title": "Variables & Client Runtime",
+      "path": "/variables-runtime"
+    },
+    {
+      "title": "Interactive Playground",
+      "path": "/playground-runner"
+    },
+    {
+      "title": "Doctor Diagnostics",
+      "path": "/doctor-diagnostics"
+    }
+  ]
+}

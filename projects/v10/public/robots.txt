@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mgks.github.io/beta-test/sitemap.xml

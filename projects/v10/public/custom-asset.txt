@@ -1,0 +1,2 @@
+docmd v0.10.0 public static root asset pipeline verification.
+Preserves hierarchy and deploys to root site destination.

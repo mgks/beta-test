@@ -1,4 +1,5 @@
 {
+  "title": "docmd Beta Test",
   "url": "https://mgks.github.io/beta-test",
   "out": "site",
   "plugins": {
@@ -14,24 +15,9 @@
     },
     "projects": [
       {
-        "title": "Default UI + Showcase",
+        "title": "v0.10.0",
         "prefix": "/",
-        "src": "projects/default-ui"
-      },
-      {
-        "title": "Summer + Semantic",
-        "prefix": "/semantic",
-        "src": "projects/semantic"
-      },
-      {
-        "title": "Rust + Speed",
-        "prefix": "/rust",
-        "src": "projects/rust"
-      },
-      {
-        "title": "i18n + Versioning",
-        "prefix": "/i18n",
-        "src": "projects/i18n"
+        "src": "projects/v10"
       }
     ]
   }
