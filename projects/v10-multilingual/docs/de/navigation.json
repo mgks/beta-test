@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Übersicht",
+    "path": "/",
+    "icon": "home"
+  },
+  {
+    "title": "Summer Funktionen",
+    "path": "/features",
+    "icon": "sparkles"
+  }
+]

@@ -15,8 +15,8 @@ MDX compilation is enabled by default. Pages with `.mdx` extension or standard `
 
 ### 1. Alert Callouts
 
-<Callout type="tip" title="Built-in JSX Callout">
-This callout is rendered directly from JSX syntax within the Markdown source file using <code>&lt;Callout&gt;</code>.
+<Callout type="tip" title="Built-in JSX Callout" icon="rocket">
+This callout is rendered directly from JSX syntax within the Markdown source file using <code>&lt;Callout&gt;</code>, styling seamlessly with docmd's native container system.
 </Callout>
 
 ### 2. Badges & Tags
@@ -25,9 +25,24 @@ Status Badges: <Badge variant="success">Active v{{ docmd.version }}</Badge> <Bad
 
 ### 3. Interactive Cards
 
-<Card title="Interactive JSX Card" icon="sparkles">
-This card is authored in JSX syntax with custom props and Markdown child elements.
+<Card title="Interactive JSX Card" icon="sparkles" href="../static-assets/">
+This card is authored in JSX syntax with custom props and Markdown child elements, styled with the native docmd card container classes.
 </Card>
+
+### 4. Code Tabs Component
+
+<Tabs>
+  <Tab label="npm">
+    ```bash
+    npm install docmd
+    ```
+  </Tab>
+  <Tab label="pnpm">
+    ```bash
+    pnpm add docmd
+    ```
+  </Tab>
+</Tabs>
 
 ## Expression Evaluation
 
@@ -36,6 +51,7 @@ In MDX, expressions enclosed in curly braces are evaluated dynamically:
 - Mathematical evaluation: **2 + 2 = {2 + 2}**
 - String manipulation: **{'DOCMD'.toLowerCase() + '.io'}**
 - Date format year: **{new Date().getFullYear()}**
+- Array joining: **{['Doc', 'MD'].join('-')}**
 
 ## Component Source Example
 

@@ -1,0 +1,58 @@
+{
+  "title": "Summer Theme & Multilingual Suite",
+  "url": "https://mgks.github.io/beta-test",
+  "engine": "js",
+  "theme": {
+    "name": "summer"
+  },
+  "layout": {
+    "spa": true,
+    "breadcrumbs": true,
+    "header": {
+      "enabled": true
+    },
+    "sidebar": {
+      "collapsible": true,
+      "defaultCollapsed": false
+    },
+    "menubar": {
+      "enabled": true,
+      "position": "top",
+      "left": [
+        { "text": "Overview", "url": "/" },
+        { "text": "Features", "url": "/features/" }
+      ]
+    },
+    "optionsMenu": {
+      "position": "header",
+      "components": {
+        "search": true,
+        "themeSwitch": true
+      }
+    },
+    "banner": {
+      "position": "top",
+      "content": "**Summer Template Active** — Showcasing the Summer product theme, bilingual German/English docs, and vector semantic search.",
+      "dismissible": true
+    },
+    "footer": {
+      "style": "complete",
+      "content": "© {{ docmd.buildYear }} docmd.io · Summer Theme & Multilingual Staging Suite",
+      "branding": true
+    }
+  },
+  "i18n": {
+    "default": "en",
+    "locales": [
+      { "id": "en", "label": "English" },
+      { "id": "de", "label": "Deutsch" }
+    ]
+  },
+  "plugins": {
+    "search": {
+      "semantic": true
+    },
+    "mdx": true,
+    "iconify": true
+  }
+}

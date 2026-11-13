@@ -17,9 +17,13 @@ The following root assets are shipped in this staging project:
 
 | Source File | Destination URL | Purpose |
 | :--- | :--- | :--- |
-| `public/robots.txt` | [`/robots.txt`](/robots.txt) | Search engine indexing rules & sitemap location |
-| `public/custom-asset.txt` | [`/custom-asset.txt`](/custom-asset.txt) | Plaintext asset integrity verification |
-| `public/funding.json` | [`/funding.json`](/funding.json) | Open-source funding & sponsorship manifest v1.1.0 |
+| `public/robots.txt` | [`robots.txt`](../robots.txt) | Search engine indexing rules & sitemap location |
+| `public/custom-asset.txt` | [`custom-asset.txt`](../custom-asset.txt) · [Direct URL](https://mgks.github.io/beta-test/custom-asset.txt) | Plaintext asset integrity verification |
+| `public/funding.json` | [`funding.json`](../funding.json) | Open-source funding & sponsorship manifest v1.1.0 |
+
+::: callout info title="SPA Router Asset Bypass"
+Hyperlinks pointing to static assets (such as `.txt`, `.json`, `.pdf`, `.png`, etc.) on the same host are automatically bypassed by the docmd SPA router. The browser navigates natively to the asset without intercepting it as an HTML page.
+:::
 
 ## Configuration Example
 

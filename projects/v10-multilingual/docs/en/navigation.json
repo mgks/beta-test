@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Overview",
+    "path": "/",
+    "icon": "home"
+  },
+  {
+    "title": "Summer Features",
+    "path": "/features",
+    "icon": "sparkles"
+  }
+]
