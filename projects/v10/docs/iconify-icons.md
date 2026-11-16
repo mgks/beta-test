@@ -45,7 +45,27 @@ Full support for Markdown, MDX, and OpenAPI schemas.
 
 - Terminal icon: ::: button icon="iconify:carbon:terminal" text="Terminal" url="#" :::
 - GitHub icon: ::: button icon="iconify:mdi:github" text="GitHub" url="https://github.com/docmd-io/docmd" :::
-- Sparkles icon: ::: button icon="iconify:lucide:sparkles" text="New in 0.10.0" url="#" :::
+- Sparkles icon: ::: button icon="iconify:lucide:sparkles" text="New in 0.10.1" url="#" :::
+
+### 4. Tabs & Tags with Iconify
+
+::: tabs
+== tab "Docker Compose" icon:iconify:tabler:brand-docker
+```yaml
+services:
+  docs:
+    image: ghcr.io/docmd-io/docmd:latest
+```
+
+== tab "Kubernetes" icon:iconify:simple-icons:kubernetes
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+```
+:::
+
+::: tag "Production Ready" icon:iconify:solar:verified-check-bold color:green
+::: tag "npm Package" icon:iconify:simple-icons:npm color:red
 
 ## Configuration
 

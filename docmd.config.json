@@ -15,12 +15,12 @@
     },
     "projects": [
       {
-        "title": "v0.10.0 (Default UI)",
+        "title": "v0.10.1 (Default UI)",
         "prefix": "/",
         "src": "projects/v10"
       },
       {
-        "title": "v0.10.0 (Summer + i18n)",
+        "title": "v0.10.1 (Summer + i18n)",
         "prefix": "/summer",
         "src": "projects/v10-multilingual"
       }

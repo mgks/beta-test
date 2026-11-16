@@ -1,5 +1,5 @@
 {
-  "title": "docmd v0.10.0 Beta Test Suite",
+  "title": "docmd v0.10.1 Beta Test Suite",
   "url": "https://mgks.github.io/beta-test",
   "engine": "js",
   "layout": {
@@ -17,6 +17,7 @@
       "position": "top",
       "left": [
         { "text": "Overview", "url": "/" },
+        { "text": "Links & Codeblocks", "url": "/links-and-codeblocks/" },
         { "text": "Production Server", "url": "/production-server/" },
         { "text": "Static Assets", "url": "/static-assets/" },
         { "text": "MDX Components", "url": "/mdx-components/" },
