@@ -1,6 +1,7 @@
 ---
 title: "v0.10.1 Fixes Verification: Links & Codeblocks"
-description: "Verification page for code block rendering and internal link normalization."
+description: "Verification page for code block rendering, internal link normalization, and GitHub heading IDs."
+headingIds: github
 ---
 
 # v0.10.1 Fixes Verification
@@ -58,3 +59,18 @@ metadata:
 
 ::: tag "Production Ready" icon:iconify:solar:verified-check-bold color:green
 ::: tag "npm Package" icon:iconify:simple-icons:npm color:red
+
+## 4. GitHub-Compatible Heading IDs (#286)
+
+Below are headings tested against flat GitHub-slugger formatting (spaces to hyphens, punctuation dropped without collapsing dashes):
+
+- [Jump to Docker Socket & Security](#docker-socket--security)
+- [Jump to Install / Setup](#install--setup)
+
+### Docker Socket & Security
+
+This section verifies that double dashes `--` are preserved when punctuation such as `&` is stripped between spaces.
+
+### Install / Setup
+
+This section verifies that `/` is replaced by `--` and links work with GitHub-style flat anchor IDs.
