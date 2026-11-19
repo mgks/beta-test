@@ -1,0 +1,14 @@
+{
+  "alice": {
+    "name": "Alice Smith",
+    "avatar": "https://avatars.githubusercontent.com/u/1?v=4"
+  },
+  "bob": {
+    "name": "Bob Jones",
+    "avatar": "https://avatars.githubusercontent.com/u/2?v=4"
+  },
+  "reviewer": {
+    "name": "Lead Reviewer",
+    "avatar": "https://avatars.githubusercontent.com/u/3?v=4"
+  }
+}

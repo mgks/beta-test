@@ -1,5 +1,5 @@
 {
-  "title": "docmd v0.10.1 Beta Test Suite",
+  "title": "docmd v0.10.2 Beta Test Suite",
   "url": "https://mgks.github.io/beta-test",
   "engine": "js",
   "layout": {
@@ -24,6 +24,7 @@
         { "text": "Iconify Icons", "url": "/iconify-icons/" },
         { "text": "Variables & Runtime", "url": "/variables-runtime/" },
         { "text": "Playground", "url": "/playground-runner/" },
+        { "text": "Threads v2", "url": "/threads-v2/" },
         { "text": "Doctor", "url": "/doctor-diagnostics/" }
       ]
     },
@@ -36,7 +37,7 @@
     },
     "banner": {
       "position": "top",
-      "content": "**docmd v{{ docmd.version }} Staging** — Testing Production Server, Static Assets, MDX, Iconify & Diagnostics.",
+      "content": "**docmd v{{ docmd.version }} Staging** — Testing Threads v2 Discussions, Production Server, Static Assets, MDX & Diagnostics.",
       "dismissible": true,
       "link": {
         "text": "GitHub Release",
@@ -66,7 +67,14 @@
     "sitemap": true,
     "search": true,
     "mermaid": true,
-    "math": true
+    "math": true,
+    "threads": {
+      "sidebar": true,
+      "autoPublish": {
+        "seconds": 180,
+        "startOn": true
+      }
+    }
   },
   "variables": {
     "featureRelease": "0.10.0",
@@ -117,6 +125,10 @@
     {
       "title": "Interactive Playground",
       "path": "/playground-runner"
+    },
+    {
+      "title": "Threads v2 (Discussions & Reviews)",
+      "path": "/threads-v2"
     },
     {
       "title": "Doctor Diagnostics",
