@@ -41,7 +41,7 @@ Preserving your documentation as the single source of truth.
 ::: comment c-103 "Lead Reviewer" "2026-11-19T10:20:00Z" by reviewer review rev-102
 Verified that all containers nest cleanly inside depth-tracking containers without breaking adjacent code blocks or admonitions.
 :::
-::: comment c-104 "Alice Smith" "2026-11-19T10:28:00Z" reply-to c-103 by alice review rev-102 edited "2026-11-19T10:29:00Z"
+::: comment c-104 "Alice Smith" "2026-11-19T10:28:00Z" reply-to c-103 edited "2026-11-19T10:29:00Z" by alice review rev-102
 Thank you! Closing this review thread now.
 :::
 ::: reactions
