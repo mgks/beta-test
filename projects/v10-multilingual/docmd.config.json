@@ -20,7 +20,8 @@
       "position": "top",
       "left": [
         { "text": "Overview", "url": "/" },
-        { "text": "Features", "url": "/features/" }
+        { "text": "Features", "url": "/features/" },
+        { "text": "Tables", "url": "/tables/" }
       ]
     },
     "optionsMenu": {
@@ -49,9 +50,7 @@
     ]
   },
   "plugins": {
-    "search": {
-      "semantic": true
-    },
+    "search": true,
     "mdx": true,
     "iconify": true
   }

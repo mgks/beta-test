@@ -17,15 +17,8 @@
       "position": "top",
       "left": [
         { "text": "Overview", "url": "/" },
-        { "text": "Links & Codeblocks", "url": "/links-and-codeblocks/" },
-        { "text": "Production Server", "url": "/production-server/" },
-        { "text": "Static Assets", "url": "/static-assets/" },
-        { "text": "MDX Components", "url": "/mdx-components/" },
-        { "text": "Iconify Icons", "url": "/iconify-icons/" },
-        { "text": "Variables & Runtime", "url": "/variables-runtime/" },
-        { "text": "Playground", "url": "/playground-runner/" },
         { "text": "Threads v2", "url": "/threads-v2/" },
-        { "text": "Doctor", "url": "/doctor-diagnostics/" }
+        { "text": "Tables", "url": "/tables/" }
       ]
     },
     "optionsMenu": {
@@ -77,7 +70,7 @@
     }
   },
   "variables": {
-    "featureRelease": "0.10.0",
+    "featureRelease": "{{docmd.version}}",
     "testEnvironment": "beta-test",
     "dynamic": [
       "user.name",
@@ -103,36 +96,12 @@
       "path": "/"
     },
     {
-      "title": "Production Server (docmd serve)",
-      "path": "/production-server"
-    },
-    {
-      "title": "Static Root Assets Pipeline",
-      "path": "/static-assets"
-    },
-    {
-      "title": "MDX Component Rendering",
-      "path": "/mdx-components"
-    },
-    {
-      "title": "Iconify Dynamic Icons",
-      "path": "/iconify-icons"
-    },
-    {
-      "title": "Variables & Client Runtime",
-      "path": "/variables-runtime"
-    },
-    {
-      "title": "Interactive Playground",
-      "path": "/playground-runner"
-    },
-    {
       "title": "Threads v2 (Discussions & Reviews)",
       "path": "/threads-v2"
     },
     {
-      "title": "Doctor Diagnostics",
-      "path": "/doctor-diagnostics"
+      "title": "Large Tables Test",
+      "path": "/tables"
     }
   ]
 }
