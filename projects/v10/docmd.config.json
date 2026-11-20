@@ -61,7 +61,13 @@
     "search": true,
     "mermaid": true,
     "math": true,
-    "threads": false
+    "threads": {
+      "sidebar": true,
+      "autoPublish": {
+        "seconds": 180,
+        "startOn": true
+      }
+    }
   },
   "variables": {
     "featureRelease": "{{docmd.version}}",
