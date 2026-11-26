@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "id": "r-e990226d",
+  "authorKey": "ghazi",
+  "authorName": "Ghazi",
+  "title": "Comments by Ghazi: 1 comment on docmd Beta Test Suite",
+  "summary": null,
+  "state": "published",
+  "publishedAt": "2026-11-26T10:49:07.666Z",
+  "ops": [
+    {
+      "kind": "add-thread",
+      "file": "docs/index.md",
+      "threadId": "t-bb4c26df",
+      "commentId": "c-31dfb618",
+      "anchor": {
+        "quote": "cenarios",
+        "prefix": "\n          Test S",
+        "suffix": "\n        ",
+        "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(2)",
+        "offset": 17,
+        "blockText": "Test Scenarios"
+      },
+      "body": "testing?",
+      "opId": "o-d2d7820d",
+      "at": "2026-11-26T10:48:41.227Z",
+      "quote": "cenarios",
+      "pageTitle": "docmd Beta Test Suite"
+    }
+  ],
+  "skipped": []
+}

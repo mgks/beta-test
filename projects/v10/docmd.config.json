@@ -62,7 +62,7 @@
     "mermaid": true,
     "math": true,
     "threads": {
-      "sidebar": true,
+      "sidebar": false,
       "autoPublish": {
         "seconds": 180,
         "startOn": true
