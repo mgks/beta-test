@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "id": "r-eebbcad7",
+  "authorKey": "ghazi",
+  "authorName": "Ghazi",
+  "title": "Comments by Ghazi: 2 comments on docmd Beta Test Suite",
+  "summary": null,
+  "state": "published",
+  "publishedAt": "2026-11-26T15:08:38.427Z",
+  "ops": [
+    {
+      "kind": "toggle-reaction",
+      "file": "docs/index.md",
+      "threadId": "t-bb4c26df",
+      "commentId": "c-b054adc7",
+      "emoji": "👍",
+      "opId": "o-f857733d",
+      "at": "2026-11-26T14:39:59.252Z",
+      "before": {
+        "present": false
+      },
+      "pageTitle": "docmd Beta Test Suite"
+    },
+    {
+      "kind": "toggle-reaction",
+      "file": "docs/index.md",
+      "threadId": "t-bb4c26df",
+      "commentId": "c-b054adc7",
+      "emoji": "👍",
+      "opId": "o-b7eab57f",
+      "at": "2026-11-26T14:40:00.520Z",
+      "before": {
+        "present": true
+      },
+      "pageTitle": "docmd Beta Test Suite"
+    }
+  ],
+  "skipped": []
+}

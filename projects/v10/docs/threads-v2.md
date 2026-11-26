@@ -4,12 +4,6 @@ The ==Threads v2 plugin introduces persistent, Git-friendly discussion threads==
 
 All discussions live directly inside your Markdown files using pure container syntax (`::: threads`, `::: thread`, `::: anchor`, `::: comment`, `::: reactions`), ==preserving your documentation as the single source of truth=={th-docmd-resolved-2}.
 
----
-
-## Active Inline Discussion
-
-Below is a live inline discussion thread anchored to a snippet of documentation:
-
 ::: threads
   ::: thread th-docmd-review-1
     ::: anchor
@@ -20,9 +14,9 @@ Below is a live inline discussion thread anchored to a snippet of documentation:
       This is a game changer for technical documentation reviews! Authors can draft comments locally without polluting the live document immediately.
 
       ::: reactions
-        - 👍 alice, bob, ghazi
+        - 👍 alice, bob, ghazi, Ghazi
         - 🎉 alice, ghazi
-        - 🚀 reviewer
+        - 🚀 reviewer, Ghazi
       :::
     :::
 
@@ -32,19 +26,12 @@ Below is a live inline discussion thread anchored to a snippet of documentation:
       ::: reactions
         - ❤️ alice
         - 👍 ghazi
+        - 👎 Ghazi
       :::
     :::
   :::
-:::
 
----
-
-## Resolved Thread Example
-
-Threads can also be marked as resolved with timestamp and resolver metadata:
-
-::: threads
-  ::: thread th-docmd-resolved-2 resolved "Lead Reviewer" "2026-11-19T10:30:00Z"
+  ::: thread th-docmd-resolved-2 resolved "Ghazi" "2026-11-26"
     ::: anchor
       preserving your documentation as the single source of truth
     :::
@@ -56,19 +43,6 @@ Threads can also be marked as resolved with timestamp and resolver metadata:
         - 👀 alice, bob
         - 👍 lead
       :::
-    :::
-
-    ::: comment c-104 "Alice Smith" "2026-11-19T10:28:00Z" reply-to c-103 edited "2026-11-19T10:29:00Z" by alice review rev-102
-      Thank you! Closing this review thread now.
-    :::
-  :::
-  ::: thread t-7ba82455
-    ::: anchor
-      Options Breakdown
-    :::
-
-    ::: comment c-2ed1f8f3 "Ghazi" "2026-11-26" by ghazi review r-fa5964fa
-      hi
     :::
   :::
 :::
@@ -93,7 +67,7 @@ In `docmd.config.json`, enable threads with your preferred sidebar and auto-publ
 }
 ```
 
-### ==Options Breakdown=={t-7ba82455}
+### Options Breakdown
 
 | Option | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
