@@ -25,13 +25,12 @@ All discussions live directly inside your Markdown files using pure container sy
 
       ::: reactions
         - ❤️ alice
-        - 👍 ghazi
+        - 👍 ghazi, Ghazi
         - 👎 Ghazi
       :::
     :::
   :::
-
-  ::: thread th-docmd-resolved-2 resolved "Ghazi" "2026-11-26"
+  ::: thread th-docmd-resolved-2 resolved "Lead Reviewer" "2026-11-19T10:30:00Z"
     ::: anchor
       preserving your documentation as the single source of truth
     :::
@@ -43,6 +42,19 @@ All discussions live directly inside your Markdown files using pure container sy
         - 👀 alice, bob
         - 👍 lead
       :::
+    :::
+
+    ::: comment c-104 "Alice Smith" "2026-11-19T10:28:00Z" reply-to c-103 edited "2026-11-19T10:29:00Z" by alice review rev-102
+      Thank you! Closing this review thread now.
+    :::
+  :::
+  ::: thread t-7ba82455
+    ::: anchor
+      Options Breakdown
+    :::
+
+    ::: comment c-2ed1f8f3 "Ghazi" "2026-11-26" by ghazi review r-fa5964fa
+      hi
     :::
   :::
 :::
@@ -67,7 +79,7 @@ In `docmd.config.json`, enable threads with your preferred sidebar and auto-publ
 }
 ```
 
-### Options Breakdown
+### ==Options Breakdown=={t-7ba82455}
 
 | Option | Type | Default | Description |
 | :--- | :--- | :--- | :--- |

@@ -5,7 +5,7 @@
   "authorName": "Ghazi",
   "title": "Comments by Ghazi: 10 comments on Threads v2 (Discussions & Reviews)",
   "summary": null,
-  "state": "published",
+  "state": "discarded",
   "publishedAt": "2026-11-26T12:40:28.879Z",
   "ops": [
     {
@@ -174,5 +174,8 @@
       "pageTitle": "Threads v2 (Discussions & Reviews)"
     }
   ],
-  "skipped": []
+  "skipped": [],
+  "discardedAt": "2026-11-26T17:59:19.345Z",
+  "discardedBy": "ghazi",
+  "discardSkipped": []
 }
