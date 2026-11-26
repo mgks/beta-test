@@ -15,7 +15,7 @@ All discussions live directly inside your Markdown files using pure container sy
 
       ::: reactions
         - 👍 alice, bob, ghazi, Ghazi
-        - 🎉 alice, ghazi
+        - 🎉 alice, ghazi, Ghazi
         - 🚀 reviewer, Ghazi
       :::
     :::
