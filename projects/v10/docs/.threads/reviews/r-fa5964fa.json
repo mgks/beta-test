@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "id": "r-fa5964fa",
+  "authorKey": "ghazi",
+  "authorName": "Ghazi",
+  "title": "Comments by Ghazi: 1 comment on Threads v2 (Discussions & Reviews)",
+  "summary": null,
+  "state": "published",
+  "publishedAt": "2026-11-26T11:09:57.522Z",
+  "ops": [
+    {
+      "kind": "add-thread",
+      "file": "docs/threads-v2.md",
+      "threadId": "t-7ba82455",
+      "commentId": "c-2ed1f8f3",
+      "anchor": {
+        "quote": "Options Breakdown",
+        "prefix": "\n          ",
+        "suffix": "\n        ",
+        "selector": "div:nth-of-type(1) > div:nth-of-type(2) > div > ul > li:nth-of-type(5)",
+        "offset": 11,
+        "blockText": "Options Breakdown"
+      },
+      "body": "hi",
+      "opId": "o-db9e0d19",
+      "at": "2026-11-26T11:06:57.512Z",
+      "quote": "Options Breakdown",
+      "pageTitle": "Threads v2 (Discussions & Reviews)"
+    }
+  ],
+  "skipped": []
+}

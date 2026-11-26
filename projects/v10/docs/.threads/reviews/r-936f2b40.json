@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "id": "r-936f2b40",
+  "authorKey": "ghazi",
+  "authorName": "Ghazi",
+  "title": "Comments by Ghazi: 2 comments on Threads v2 (Discussions & Reviews)",
+  "summary": null,
+  "state": "published",
+  "publishedAt": "2026-11-26T11:06:37.331Z",
+  "ops": [
+    {
+      "kind": "resolve-thread",
+      "file": "docs/threads-v2.md",
+      "threadId": "th-docmd-review-1",
+      "opId": "o-5dff0efc",
+      "at": "2026-11-26T11:03:32.613Z",
+      "before": {
+        "resolved": false,
+        "resolved_by": null,
+        "resolved_at": null
+      },
+      "pageTitle": "Threads v2 (Discussions & Reviews)"
+    },
+    {
+      "kind": "resolve-thread",
+      "file": "docs/threads-v2.md",
+      "threadId": "th-docmd-review-1",
+      "opId": "o-69ab73bb",
+      "at": "2026-11-26T11:03:37.325Z",
+      "before": {
+        "resolved": true,
+        "resolved_by": "Ghazi",
+        "resolved_at": "2026-11-26"
+      },
+      "pageTitle": "Threads v2 (Discussions & Reviews)"
+    }
+  ],
+  "skipped": []
+}

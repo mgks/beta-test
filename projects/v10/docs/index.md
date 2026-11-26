@@ -38,5 +38,9 @@ Test large dataset table rendering (60 rows, 8 wide columns), responsive horizon
     ::: comment c-31dfb618 "Ghazi" "2026-11-26" by ghazi review r-e990226d
       testing?
     :::
+
+    ::: comment c-b054adc7 "Ghazi" "2026-11-26" by ghazi review r-174323f2
+      yes it is
+    :::
   :::
 :::
